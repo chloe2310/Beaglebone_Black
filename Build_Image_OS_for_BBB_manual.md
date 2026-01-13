@@ -2,6 +2,7 @@
 BUILD IMAGE OS CHO BBB (THỦ CÔNG)
 
 1) Toolchain :
+
 •	Toolchain = bộ công cụ biên dịch (compiler tool chain).
 •	Nó gồm nhiều chương trình nhỏ, làm việc liên tiếp nhau để chuyển code C/C++ thành chương trình chạy được trên một kiến trúc CPU cụ thể.
 Thành phần chính:
@@ -34,6 +35,9 @@ ls tiếp ta sẽ thấy file được giải nén :
 Sau đấy xóa cái file nén cũ đi cho đỡ nặng máy nhé (lệnh cho đỡ lười này ) : rm gcc-linaro-6.5.0-2018.12-x86_64_arm-linux-gnueabihf.tar.xz ( thêm -rf cũng được ) .
 
 Sau đó bắt buộc : export CC=`pwd`/gcc-linaro-6.5.0-2018.12-x86_64_arm-linux-gnueabihf/bin/arm-linux-gnueabihf- rồi check version : ${CC}gcc --version 
+
+
+
 
 2 ,Bootloader  
 Đầu tiên ,  Clone Uboot từ mainline bằng lệnh : 
@@ -71,6 +75,8 @@ make ARCH=arm CROSS_COMPILE=${CC} -j$(nproc)
 và kiểm tra log có đoạn “Building spl / Creating MLO”.
 
 
+
+
 3,Linux Kernel ( cái này build rất là lâu đấy , nên nhớ để máy ảo nhiều core vào)
 
 Dùng các lệnh : 
@@ -87,6 +93,9 @@ Lúc đang build nó ra cái màn hình như dưới :
 
 Dùng mũi tên trái phải ở bàn phím ấn Save nhé , Có mấy cái bảng nhỏ cứ nhấn OK hết rồi Exit ra ngoài cho nó build tiếp nha.
 Xong rồi thì cd ra ngoài để ta tiếp tục build thằng Rootfs nhé 
+
+
+
 
 4, Root file system (Rootfs) :
 Tải và giải nén rootfs 
