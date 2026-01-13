@@ -175,7 +175,7 @@ sudo sh -c "echo '/dev/mmcblk0p1  /    auto  errors=remount-ro  0  1' >> /media/
 
 sudo vim /media/rootfs/etc/network/interfaces
 
-# sau đó thêm vào 4 dòng dưới:
+# Sau đó thêm vào 4 dòng dưới:
 auto lo
 iface lo inet loopback
 
@@ -184,8 +184,9 @@ iface eth0 inet dhcp
 sync 
 sudo umount /media/rootfs
 
-# sau khi xong thì cắm thẻ vào bbb và giữ nút s2 trước khi cắm nguồn, để nạp vào, chứ không thì nó nạp chương trình mặc định của nó
-# username: debian    pass: tempwd
+# Sau khi xong thì cắm thẻ vào bbb và giữ nút s2 trước khi cắm nguồn, để nạp vào, chứ không thì nó nạp chương trình mặc định của nó
+# username: debian 
+# pass: tempwd
 dmesg để đọc log nhé 
 
 Vậy là con board Beaglebone Black đã chạy được Linux OS (debian) rồi :
